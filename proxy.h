@@ -1098,6 +1098,7 @@ proxy<F> make_proxy(T&& value) {
 namespace details {
 
 constexpr std::size_t invalid_size = std::numeric_limits<std::size_t>::max();
+// invalid_cl: constraint_level 枚举值的类型的最小值
 constexpr constraint_level invalid_cl = static_cast<constraint_level>(
     std::numeric_limits<std::underlying_type_t<constraint_level>>::min());
 consteval auto normalize(proxiable_ptr_constraints value) {
